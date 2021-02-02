@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'crear-libro',
+    loadChildren: () => import('./pages/crear-libro/crear-libro.module').then( m => m.CrearLibroPageModule)
+  },
+  {
+    path: 'listar-libro',
+    loadChildren: () => import('./pages/listar-libro/listar-libro.module').then( m => m.ListarLibroPageModule)
+  },
 ];
 
 @NgModule({
